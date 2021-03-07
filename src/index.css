@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Nunito;
+    font-weight: 400;
+    font-style: normal;
+    src: url(./fonts/Nunito-Regular.woff) format("woff");
+  }
+  @font-face {
+    font-family: Nunito;
+    font-weight: 400;
+    font-style: italic;
+    src: url(./fonts/Nunito-Italic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Nunito;
+    font-weight: 700;
+    font-style: normal;
+    src: url(./fonts/Nunito-Bold.woff) format("woff");
+  }
+  @font-face {
+    font-family: Nunito;
+    font-weight: 700;
+    font-style: italic;
+    src: url(./fonts/Nunito-BoldItalic.woff) format("woff");
+  }
+  @font-face {
+    font-family: Nunito;
+    font-weight: 300;
+    font-style: normal;
+    src: url(./fonts/Nunito-Light.woff) format("woff");
+  }
+  @font-face {
+    font-family: Nunito;
+    font-weight: 300;
+    font-style: italic;
+    src: url(./fonts/Nunito-LightItalic.woff) format("woff");
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.nav-item {
+  @apply text-gray-600 hover:bg-yellow-200 hover:text-black px-3 py-2 rounded-md text-base font-bold;
+}
+
+.nav-item.active {
+  --tw-text-opacity: 1 !important;
+  color: rgba(0, 0, 0, var(--tw-text-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(252, 211, 77, var(--tw-bg-opacity)) !important;
+}
+
+.link-custom {
+  @apply text-gray-700 hover:text-gray-500 border-b border-gray-600 hover:border-gray-400;
+}
+
+.clean-height {
+  height: calc(100vh - 80px);
+}
+
+.btn-arrow {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-arrow:after {
+  content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' width='28' height='28'> <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M14 5l7 7m0 0l-7 7m7-7H3' /> </svg>");
+  position: absolute;
+  opacity: 0;
+  top: 18px;
+  right: -22px;
+  transition: 0.5s;
+}
+
+.btn-arrow:hover {
+  padding-right: 46px;
+  padding-left: 24px;
+}
+
+.btn-arrow:hover:after {
+  opacity: 1;
+  right: 10px;
+}
