@@ -60,7 +60,7 @@ body {
   @apply text-gray-700 hover:text-gray-500 border-b border-gray-600 hover:border-gray-400;
 }
 
-.clean-height {
+.h-adjust {
   height: calc(100vh - 80px);
 }
 
@@ -80,11 +80,11 @@ body {
 }
 
 .btn-arrow:hover {
-  padding-right: 46px;
+  padding-right: 48px;
   padding-left: 24px;
 }
 
 .btn-arrow:hover:after {
   opacity: 1;
-  right: 10px;
+  right: 18px;
 }

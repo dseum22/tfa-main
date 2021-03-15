@@ -15,7 +15,9 @@ module.exports = {
         }
       },
       backgroundImage: theme => ({
-        'landing-image': "url('./images/filler-1.jpeg')",
+        'image-home': "url('./images/filler-home.jpeg')",
+        'image-about': "url('./images/filler-about.jpeg')",
+        'image-enroll': "url('./images/filler-enroll.jpeg')",
       })
     }
   }

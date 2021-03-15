@@ -6,17 +6,25 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import About from './pages/About';
+import Enroll from './pages/Enroll';
 
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
       <div className='bg-primary-100'>
         <Navbar />
-        <div className='flex flex-col h-screen justify-between'>
+        <div className='flex flex-col h-min-screen justify-between'>
           <main className='mt-20 h-full'>
             <Switch>
               <Route exact path='/'>
                 <Home />
+              </Route>
+              <Route path='/about'>
+                <About />
+              </Route>
+              <Route path='/enroll'>
+                <Enroll />
               </Route>
             </Switch>
           </main>
